@@ -17,5 +17,3 @@ jobs:
       - run:
           command: |
             pipenv run "python manage.py test"
-      - store_test_results:
-          path: test-results
