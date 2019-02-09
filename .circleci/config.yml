@@ -1,14 +1,13 @@
 version: 2
 jobs:
   build:
-    working_directory: /circleci_django
+    working_directory: ~/circleci_django
     docker:
       - image: circleci/python:3.6.4
         environment:
           PIPENV_VENV_IN_PROJECT: true
     steps:
       - checkout
-      - run: sudo chown -R $USER:$USER ˜/circleci_django
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run:
