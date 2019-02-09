@@ -5,7 +5,7 @@ jobs:
       - image: circleci/python:3.6.5
         environment:
           PIPENV_VENV_IN_PROJECT: true
-    working_directory: ˜/circleci_django
+    working_directory: /home/circleci_django
     steps:
       - checkout
       - run: sudo chown -R circleci:circleci /usr/local/bin
