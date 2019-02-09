@@ -17,6 +17,7 @@ jobs:
       - run:
           command: |
             pip freeze
+            pip3 freeze
       - run:
           command: |
             pipenv run "python manage.py test"
